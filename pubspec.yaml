@@ -37,6 +37,7 @@ dependencies:
   faker: ^2.0.0
 
 dev_dependencies:
+  scoped_model: ^2.0.0
   flutter_test:
     sdk: flutter
 

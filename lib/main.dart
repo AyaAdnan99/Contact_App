@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Ui/Contact_List/ContactListPage.dart';
+import 'package:scoped_model/scoped_model.dart';
+import 'package:contact_app/Model/contacts_model.dart';
 
 
 void main (){
@@ -11,9 +13,16 @@ class ContactApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ContactListPage(),
+
+
+    // to use scoped model inside our app
+    return  ScopedModel(
+
+      model: ContactsModel(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: ContactListPage(),
+      ),
     );
   }
 }
